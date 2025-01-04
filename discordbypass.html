@@ -1,0 +1,18 @@
+<script>
+
+var rchar = (amount) => {
+  let tstr = "."
+  for(let i = 0; i < (Math.random() * amount) - 1; i++) {
+    tstr += String.fromCharCode(Math.round(39 + Math.random() * 8))
+  }
+  return tstr
+}
+
+var text = prompt("TYPE WHAT TEXT YOU WANT TO BYPASS!")
+var amount = prompt("TYPE MAX AMOUNT OF RANDOM CHARACTERS BETWEEN EVERY LETTER!")
+var tstr = ""
+for(let i = 0; i < text.length; i++) {
+  tstr += " `" + text[i] + "` ||" + rchar(amount) + "||"
+}
+document.write(tstr)
+</script>
